@@ -1,0 +1,79 @@
+.banner-img{
+    width: 90%;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+.banner-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white; /* or any color depending on your image */
+    text-align: left;
+  }
+  
+  .banner-text h1 {
+    font-family: var(--font-montserrat);
+    margin: 0;
+    font-size: 3rem;
+  }
+  
+  .banner-text p {
+    font-family: var(--font-montserrat);
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+
+  .home-content{
+    /* background-color: #030405; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+  }
+  
+  .home-content p {
+    font-family: var(--font-montserrat);
+    width: 80%;
+    font-size: 1rem;
+    color: #030405;
+  }
+
+  .home-content h1 {
+    font-family: var(--font-montserrat);
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #030405;
+  }
+
+  .vehicle-heading{
+    width: 100%;
+    text-align: center;
+    color: #030405;
+    font-size: 2rem;
+    font-family: var(--font-montserrat);
+  }
+
+  .vehicle-container{
+    width: 100%;
+    padding: 0 0 60 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .vehicle{
+    width: 25%;
+    color: #030405;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: var(--font-montserrat);
+  }

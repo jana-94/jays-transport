@@ -1,0 +1,50 @@
+.moto-outline {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.moto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 80%;
+}
+
+
+.moto-img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
+.moto-outline h1 {
+    font-family: var(--font-montserrat);
+    font-size: 1.2rem;
+    color: #030405;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.moto-outline p {
+    margin-top: 20px;
+    color: #030405;
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+}
+
+.moto-outline li {
+    margin-top: 20px;
+    color: #030405;
+    font-family: var(--font-montserrat);
+    font-size: 1rem;
+}
+
+.inline-list {
+    list-style-type: disc;
+  }
+
+  .inline-list li {
+    display: list-item;
+  }
