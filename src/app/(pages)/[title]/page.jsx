@@ -6,6 +6,8 @@ import MotoTaxi from "@/app/pages/MotoTaxi/page";
 import { componentdetails } from "@/app/data/componentdetails";
 import Metadata from "@/app/components/metaData/metaData";
 import { metadata } from "@/app/components/metaData/data";
+import Vtc from "@/app/pages/vtc/page";
+import Van from "@/app/pages/van/page";
 
 function Services({ params }) {
   const data = use(params);
@@ -16,6 +18,8 @@ function Services({ params }) {
 
   const componentArray = [
     { id: 1, Component: <MotoTaxi />, path: "mototaxi" },
+    { id: 2, Component: <Vtc />, path: "vtc" },
+    { id: 3, Component: <Van />, path: "van" },
   ];
 
   const foundData = findDataByTitle(data.title);

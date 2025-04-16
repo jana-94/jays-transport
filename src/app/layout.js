@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer/Footer";
 import { Montserrat } from 'next/font/google';
 import CommingSoon from "./pages/commingSoon/page";
+import { LanguageProvider } from "./language/LanguageProvider";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -27,15 +28,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/img/gp.png" />
+        <link rel="icon" type="image/svg" href="/img/drive_fav_white.svg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
         <CommingSoon />
-        {/* <Header />
+        {/* <LanguageProvider>
+        <Header />
         {children}
-        <Footer /> */}
+        <Footer />
+        </LanguageProvider> */}
       </body>
     </html>
   );

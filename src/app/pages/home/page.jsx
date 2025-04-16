@@ -3,8 +3,10 @@
 import Metadata from "@/app/components/metaData/metaData";
 import './home.css';
 import MotoServices from "@/app/components/services/page";
+import { useTranslation } from "react-i18next";
 
 export default function HomePage() {
+  const { t } = useTranslation();
   return (
     <div className="flex bg-white flex-col items-center w-full">
       <Metadata
@@ -14,35 +16,30 @@ export default function HomePage() {
       <div className="banner-container">
         <img className="banner-img" alt="banner" src="/img/banner.png" />
         <div className="banner-text">
-          <p>où aimerais-tu aller</p>
-          <h1>une nouvelle classe de service</h1>
+          <p>{t('whereToGo')}</p>
+          <h1>{t('serviceClass')}</h1>
         </div>
       </div>
       <div className="home-content">
-        <h1>Jay’s Transport est le leader des services de chauffeurs privés VTC et de
-          Taxi moto à Paris et en Île-de-France.</h1>
-        <p>Nous vous offrons une gamme complète de services et un transport d'une
-          qualité irréprochable. En tant que leaders du transport avec chauffeur
-          privé dans l'Essonne (91), nous avons noué des partenariats avec des
-          chauffeurs de la région parisienne afin d'élargir notre offre, comprenant
-          des trajets en berline, en van et en moto-taxi.</p>
+        <h1>{t('introDescription')}</h1>
+        <p>{t('fullRangeDescription')}</p>
       </div>
-      <h1 className="vehicle-heading">Notre parc de véhicules</h1>
+      <h1 className="vehicle-heading">{t('fleet')}</h1>
       <div className="vehicle-container">
         <div className="vehicle">
         <img src="/img/bike.jpg" alt="bike"/>
-        <p>TAXI MOTO</p>
+        <p>{t('motoTaxi')}</p>
         </div>
         <div className="vehicle">
         <img src="/img/berline.png" alt="berline"/>
-        <p>BERLINE OU SUV</p>
+        <p>{t('sedanSUV')}</p>
         </div>
         <div className="vehicle">
         <img src="/img/van.png" alt="van"/>
-        <p>VAN ( 9 PLACES )</p>
+        <p>{t('van')}</p>
         </div>
       </div>
-      <h1 className="vehicle-heading">Nos services VTC-TAXI avec chauffeur privé et taxi moto</h1>
+      <h1 className="vehicle-heading">{t('vtcTaxiServices')}</h1>
       <MotoServices />
       </div>
   );

@@ -67,8 +67,22 @@
     white-space: nowrap;
     transition: transform 0.3s ease-in-out;
   }
+  .dropdown-item {
+    display: flex;
+    padding: 10px 15px;
+    color: #030405;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
   
   .dropdown-content a:hover {
+    color: #22C58B;
+    transform: translatex(5px);
+  }
+
+  .dropdown-item:hover {
     color: #22C58B;
     transform: translatex(5px);
   }

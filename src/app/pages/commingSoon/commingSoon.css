@@ -6,19 +6,28 @@
     justify-content: center;
     flex-direction: column;
     }
-    .commingSoon-outline p {
-        color: #FFFFFF;
-        font-size: 5rem;
-    }
     .logoimg{
         height: 100px;
         width: 200px;
     }
 
     .coming-soon {
-        font-size: 24px;
+        font-size: 5rem;
+        color: #FFFFFF;
         font-weight: bold;
         letter-spacing: 1px;
         font-family: 'Comfortaa', sans-serif; /* Or Montserrat if you're using that */
+      }
+
+      @media (max-width: 768px) {
+        .coming-soon {
+          font-size: 3rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .coming-soon {
+          font-size: 2rem;
+        }
       }
       
