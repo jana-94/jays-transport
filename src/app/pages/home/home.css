@@ -47,6 +47,14 @@
     color: #030405;
   }
 
+  .vehicle img{
+      transition: transform 0.3s ease-in-out;
+  }
+
+  .vehicle img:hover {
+    transform: translateY(-5px);
+  }
+
   .home-content h1 {
     font-family: var(--font-montserrat);
     width: 80%;

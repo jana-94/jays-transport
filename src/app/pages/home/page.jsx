@@ -4,6 +4,7 @@ import Metadata from "@/app/components/metaData/metaData";
 import './home.css';
 import MotoServices from "@/app/components/services/page";
 import { useTranslation } from "react-i18next";
+import { ContactForm } from "@/app/components/Contact/page";
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -41,6 +42,8 @@ export default function HomePage() {
       </div>
       <h1 className="vehicle-heading">{t('vtcTaxiServices')}</h1>
       <MotoServices />
+      <h1 className="vehicle-heading">{t('contact')}</h1>
+      <ContactForm />
       </div>
   );
 }

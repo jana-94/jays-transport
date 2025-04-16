@@ -3,7 +3,7 @@ const CommingSoon = () => {
     return (
         <div className="commingSoon-outline">
             <img className='logoimg' src='/img/logo_white.svg' />
-            <p class="coming-soon">
+            <p className="coming-soon">
                 COMING SOON...
             </p>
         </div>
