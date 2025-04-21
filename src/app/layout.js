@@ -33,12 +33,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
-        <CommingSoon />
-        {/* <LanguageProvider>
+        {/* <CommingSoon /> */}
+        <LanguageProvider>
         <Header />
         {children}
         <Footer />
-        </LanguageProvider> */}
+        </LanguageProvider>
       </body>
     </html>
   );
