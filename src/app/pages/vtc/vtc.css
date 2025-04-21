@@ -1,41 +1,14 @@
-.title{
-    font-size: 4rem;
-    font-family: 'Comfortaa', sans-serif; /* Or Montserrat if you're using that */
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: left;
-    color: #030405;
-    margin-top: 40px;
-    margin-left: 60px;
-}
-.banner-moto{
-    width: 60%;
-    margin-left: 20%;
-}
-.moto-heading{
-    font-size: 4rem;
-    font-family: 'Comfortaa', sans-serif; /* Or Montserrat if you're using that */
-    font-size: 2rem;
-    text-align: left;
-    color: #030405;
-    margin-top: 40px;
-    margin-left: 60px;    
-}
-.moto-content{
-    font-size: 1.1rem;
-    width: 90%;
-    font-family: 'Comfortaa', sans-serif; /* Or Montserrat if you're using that */
-    text-align: left;
-    color: #030405;
-    margin-top: 20px;
-    margin-left: 60px;
-}
-
 .vtc-list {
     list-style-type: disc;
-    margin-left: 60px;
+    margin-left: 10%;
   }
 
   .vtc-list li {
     display: list-item;
+  }
+
+  @media(max-width: 768px) {
+    .vtc-list {
+        margin-left: 20%;
+      }
   }

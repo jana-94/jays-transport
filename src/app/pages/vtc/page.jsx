@@ -20,7 +20,9 @@ export default function Vtc() {
         <h1 className='moto-heading'>{t('transportForProfessionals')}</h1>
         <p className='moto-content'>{t('proTripBenefits')}</p>
       <p className='moto-content'>{t('easyBooking')}</p>
+      <div className='book-now-button'>
       <button className='book-now'>{t('bookNow')}</button>
+      </div>
       <div style={{height: '60px'}} />
     </div>
   );

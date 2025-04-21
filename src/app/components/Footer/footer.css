@@ -63,6 +63,8 @@
 
   .address{
     color: #FFFFFF;
+    align-items: center;
+    display: flex;
   }
 
   .address:hover {
@@ -72,7 +74,7 @@
   .footer-bottom{
     display: flex;
     padding-top: 20px;
-    width: 80%;
+    width: 90%;
     align-items: center;
     justify-content: space-between;
   }
@@ -107,12 +109,112 @@
     animation-play-state: running;
     position: relative;
     display: inline-block;
-    max-width: 200px;
+    max-width: 600px;
   }
 
   .car-animation:hover {
     animation-play-state: paused;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .car-animation {
+      max-width: 600px;
+      height: 60px;
+    }
+    .car-animation {
+      max-width: 150px;
+    }
+    .footer-bottom{
+      justify-content: space-around;
+    }
+    .header-logo{
+      height: 30px;
+    }
+    .footer-outline{
+      padding: 30px 0px 30px;
+    }
+    .address-content {
+      font-size: 0.6rem;
+    }
+    @keyframes driveAcross {
+      0% {
+        transform: translateX(0);      /* Start at left (0px) */
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+        transform: translateX(80vw);  /* Move to right edge */
+      }
+      100% {
+        transform: translateX(80vw);
+        opacity: 0;
+      }
+    }
+  }
+  
+  @media (max-width: 730px) {
+    .hide-bottom-txt{
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 425px) {
+    .header-logo{
+      height: 20px;
+    }
+    .address-content{
+      font-size: .5rem;
+    }
+    .car-animation {
+      max-width: 400px;
+      height: 50px;
+    }
+    @keyframes driveAcross {
+      0% {
+        transform: translateX(0);      /* Start at left (0px) */
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+        transform: translateX(60vw);  /* Move to right edge */
+      }
+      100% {
+        transform: translateX(60vw);
+        opacity: 0;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .car-animation {
+      max-width: 400px;
+      height: 40px;
+    }
+    @keyframes driveAcross {
+      0% {
+        transform: translateX(0);      /* Start at left (0px) */
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+        transform: translateX(60vw);  /* Move to right edge */
+      }
+      100% {
+        transform: translateX(60vw);
+        opacity: 0;
+      }
+    }
   }
   
   

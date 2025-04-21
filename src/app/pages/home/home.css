@@ -1,48 +1,46 @@
-.banner-img{
-    width: 90%;
-    border-radius: 12px;
-    margin-top: 20px;
-}
 .banner-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  width: 90%;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-top: 100px !important;
+  background: url(/img/banner.png) center/cover no-repeat;
+  display: flex;
+  height: 60vh;
+  justify-content: flex-start;
+  align-items: center;
+}
   
   .banner-text {
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    transform: translateY(-50%);
-    color: white; /* or any color depending on your image */
+    color: white;
     text-align: left;
   }
   
   .banner-text h1 {
     font-family: var(--font-montserrat);
     margin: 0;
+    margin-left: 60px;
     font-size: 3rem;
   }
   
   .banner-text p {
     font-family: var(--font-montserrat);
     margin-top: 10px;
+    margin-left: 60px;
     font-size: 1.2rem;
   }
 
   .home-content{
-    /* background-color: #030405; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   
   .home-content p {
     font-family: var(--font-montserrat);
-    width: 80%;
+    width: 90%;
     font-size: 1rem;
     color: #030405;
   }
@@ -57,7 +55,7 @@
 
   .home-content h1 {
     font-family: var(--font-montserrat);
-    width: 80%;
+    width: 90%;
     margin-bottom: 10px;
     font-size: 2rem;
     color: #030405;
@@ -84,4 +82,46 @@
     font-size: 1.2rem;
     text-align: center;
     font-family: var(--font-montserrat);
+  }
+
+  @media (max-width: 768px){
+    .banner-text p {
+      font-size: .8rem;
+      margin-left: 30px;
+    }
+    
+    .banner-text h1 {
+      font-size: 1.8rem;
+      margin-left: 30px;
+    }
+    .home-content h1{
+      font-size: 1.8rem;
+    }
+    .vehicle-container {
+      flex-direction: column;
+    }
+    .vehicle {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 425px){
+
+    .banner-text p {
+      margin-left: 20px;
+    }
+    
+    .banner-text h1 {
+      font-size: 1.6rem;
+      margin-left: 20px;
+    }
+    .home-content p {
+      font-size: .8rem;
+    }
+    .home-content h1{
+      font-size: 1.6rem;
+    }
+    .vehicle-heading {
+      font-size: 1.6rem;
+    }
   }

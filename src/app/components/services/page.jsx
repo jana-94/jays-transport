@@ -26,7 +26,6 @@ const servicesData = useServicesData();
                 )
                 }
             </div>
-            <div style={{ height: '60px' }} />
         </>
     )
 }

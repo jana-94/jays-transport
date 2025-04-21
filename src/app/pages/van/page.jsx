@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslation } from 'react-i18next';
-import './van.css'
 export default function Van() {
   const { t } = useTranslation();
   return (
@@ -9,7 +8,9 @@ export default function Van() {
       <h1 className='title'>{t('carProvision')}</h1>
       <img className='banner-moto' src="/img/car1.jpg" alt="bike"/>
       <p className='moto-content'>{t('dayRental')}</p>
+      <div className='book-now-button'>
       <button className='book-now'>{t('bookNow')}</button>
+      </div>
       <div style={{height: '60px'}} />
     </div>
   );
