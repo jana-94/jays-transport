@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import './vtc.css'
+import Link from 'next/link';
 export default function Vtc() {
   const { t } = useTranslation();
   return (
@@ -21,7 +22,7 @@ export default function Vtc() {
         <p className='moto-content'>{t('proTripBenefits')}</p>
       <p className='moto-content'>{t('easyBooking')}</p>
       <div className='book-now-button'>
-      <button className='book-now'>{t('bookNow')}</button>
+      <Link className='book-now' href={{ pathname: '/', query: { service: `${t('vtc')}` }, hash: 'reservation' }}>{t('bookNow')}</Link>
       </div>
       <div style={{height: '60px'}} />
     </div>

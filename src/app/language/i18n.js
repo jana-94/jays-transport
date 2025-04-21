@@ -5,8 +5,8 @@ import fr from './fr.json'
 import en from './en.json'
 
 i18n.use(initReactI18next).init({
-  fallbackLng: 'en',
-  lng: 'en', // default language
+  fallbackLng: 'fr',
+  lng: 'fr', // default language
   interpolation: {
     escapeValue: false,
   },

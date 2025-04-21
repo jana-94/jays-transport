@@ -2,6 +2,7 @@
 
 import { useTranslation } from 'react-i18next';
 import './mototaxi.css'
+import Link from 'next/link';
 export default function MotoTaxi() {
   const { t } = useTranslation();
   return (
@@ -13,7 +14,7 @@ export default function MotoTaxi() {
       <p className='moto-content'>{t('mototaxiCustom')}</p>
       <p className='moto-content'>{t('mototaxiSafety')}</p>
       <div className='book-now-button'>
-      <button className='book-now'>{t('bookNow')}</button>
+      <Link className='book-now' href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }}>{t('bookNow')}</Link>
       </div>
       <div style={{height: '60px'}} />
     </div>

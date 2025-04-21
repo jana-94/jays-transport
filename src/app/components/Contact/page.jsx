@@ -111,7 +111,6 @@ export const ContactForm = () => {
 
     return (
         <div className="contactOutline">
-            <img className="contact-bg-img" src={t(`${formData.selectedService}`) == t('motoTaxi') ? "/img/bike_contact.png" : "/img/car_contact.png"} alt="background" />
             <form onSubmit={onFormSubmit} className="form">
                 <h1 className="contactHeading">{t(`${formData.selectedService}`)}</h1>
                 <h1 className="contact-title">{t('byPhone')}</h1>

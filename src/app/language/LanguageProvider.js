@@ -5,14 +5,14 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 
 const LanguageContext = createContext({
-  language: 'en',
+  language: 'fr',
   changeLanguage: () => {},
 });
 
 export const useLanguage = () => useContext(LanguageContext);
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(i18n.language || 'en');
+  const [language, setLanguage] = useState(i18n.language || 'fr');
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);

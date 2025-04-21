@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export default function Van() {
   const { t } = useTranslation();
@@ -9,7 +10,7 @@ export default function Van() {
       <img className='banner-moto' src="/img/car1.jpg" alt="bike"/>
       <p className='moto-content'>{t('dayRental')}</p>
       <div className='book-now-button'>
-      <button className='book-now'>{t('bookNow')}</button>
+      <Link className='book-now' href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }}>{t('bookNow')}</Link>
       </div>
       <div style={{height: '60px'}} />
     </div>
