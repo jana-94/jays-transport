@@ -11,9 +11,9 @@ export default function loading() {
   //     <div></div>
   //   </div>
   // </div>
-  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: '#030405', height: '100vh' }}>
       <img src="/img/drive_fav_white.svg" alt="Loading..." className="spinner" />
-      <h1 style={{color: '#FFFFFF'}}>Loading...</h1>
+      <h1 style={{color: '#FFFFFF', marginLeft: "10px"}}>Loading...</h1>
     </div>
   )
 }
