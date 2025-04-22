@@ -21,6 +21,16 @@ const Header = () => {
     setNavOpen(false);
   };
 
+  const handleOptionClickForScrool = () => {
+    // Scroll after short delay to ensure the DOM updates
+    setTimeout(() => {
+      const section = document.getElementById('reservation');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -155,8 +165,16 @@ const Header = () => {
         <div className='dropdown'>
           <h1 className='nav-title-txt flex'>{t('reservation')} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
           <div className='dropdown-content'>
-            <Link href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }} onClick={handleOptionClick}>{t('motoTaxi')}</Link>
-            <Link href={{ pathname: '/', query: { service: `${t('vtc')}` }, hash: 'reservation' }} onClick={handleOptionClick}>{t('vtc')}</Link>
+            <Link scroll={false} href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }}
+             onClick={() => {
+              handleOptionClick();
+              handleOptionClickForScrool();
+            }}>{t('motoTaxi')}</Link>
+            <Link scroll={false} href={{ pathname: '/', query: { service: `${t('vtc')}` }, hash: 'reservation' }}
+             onClick={() => {
+              handleOptionClick();
+              handleOptionClickForScrool();
+            }}>{t('vtc')}</Link>
           </div>
         </div>
         <div className='divider-nav' />
