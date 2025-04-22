@@ -155,13 +155,13 @@ const Header = () => {
         <div className='dropdown'>
           <h1 className='nav-title-txt flex'>{t('reservation')} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
           <div className='dropdown-content'>
-            <Link href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'contact' }} onClick={handleOptionClick}>{t('motoTaxi')}</Link>
-            <Link href={{ pathname: '/', query: { service: `${t('vtc')}` }, hash: 'contact' }} onClick={handleOptionClick}>{t('vtc')}</Link>
+            <Link href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }} onClick={handleOptionClick}>{t('motoTaxi')}</Link>
+            <Link href={{ pathname: '/', query: { service: `${t('vtc')}` }, hash: 'reservation' }} onClick={handleOptionClick}>{t('vtc')}</Link>
           </div>
         </div>
         <div className='divider-nav' />
 
-        <Link className='nav-title-txt' href="/#contact" onClick={handleOptionClick}>
+        <Link className='nav-title-txt' href="/#footer" onClick={handleOptionClick}>
           <h1>{t('contact')}</h1>
         </Link>
         <div className='divider-nav' />
