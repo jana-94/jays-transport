@@ -2,7 +2,7 @@
 import { useServicesData } from '@/app/data/servicesData';
 import './services.css';
 
-const MotoServices = () => {
+const OurServices = () => {
 const servicesData = useServicesData();
     return (
         <>
@@ -30,4 +30,4 @@ const servicesData = useServicesData();
     )
 }
 
-export default MotoServices;
+export default OurServices;

@@ -19,4 +19,14 @@ export const metadata = [
     title: "van",
     description: "jay's transport van",
   },
+  {
+    slug: "motoservice",
+    title: "motoservice",
+    description: "jay's transport motoservice",
+  },
+  {
+    slug: "vtcservice",
+    title: "vtcservice",
+    description: "jay's transport vtcservice",
+  },
 ];

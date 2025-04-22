@@ -11,4 +11,12 @@ export const componentdetails = [
     id: 3,
     slug: "van",
   },
+  {
+    id: 4,
+    slug: "motoservice",
+  },
+  {
+    id: 5,
+    slug: "vtcservice",
+  },
 ];

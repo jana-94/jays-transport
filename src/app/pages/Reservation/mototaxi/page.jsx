@@ -1,38 +1,48 @@
 'use client';
 
 import { useTranslation } from 'react-i18next';
-import './contact.css';
-import { useEffect, useState } from 'react';
+import './motoService.css';
+import { useState } from 'react';
 
-export const ContactForm = () => {
+ const MotoService = () => {
     const { t } = useTranslation();
     const [message, setMessage] = useState('');
     const [showMessage, setShowMessage] = useState('');
     const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        description: '',
+        name: '',
+        serviceType: '',
+        departure: '',
+        destination: '',
+        date: '',
+        time: '',
         email: '',
         mobile: '',
+        description: '',
     });
 
 
     const clearAllFormData = () => {
         setFormData({
-            firstName: '',
-            lastName: '',
-            description: '',
+            name: '',
+            serviceType: '',
+            departure: '',
+            destination: '',
+            date: '',
+            time: '',
             email: '',
             mobile: '',
+            description: '',
         });
     }
 
 
     const generateEmailTemplate = (formData) => {
         return `
-          Hi, I'm ${formData.firstName} ${formData.lastName}.
+          Hi, I'm ${formData.name}. I need ${formData.serviceType} service 
+          from ${formData.departure} to ${formData.destination} 
+          on ${formData.date} at ${formData.time}.
           You can contact me at Email: ${formData.email}, Mobile: ${formData.mobile}.
-          Description: ${formData.description}
+          ${formData.description?.length > 0 ? `Description: ${formData.description}` : ''}.
         `;
     };
 
@@ -52,7 +62,7 @@ export const ContactForm = () => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              name: formData.firstName + ' ' + formData.lastName,
+              name: formData.name,
               email: formData.email,
               message: message,
             }),
@@ -86,17 +96,47 @@ export const ContactForm = () => {
       
 
     return (
-        <div className="contactOutline">
+        <div className='bg-white py-10 mt-12'>
+        <div className="moto-service-Outline">
             <form onSubmit={onFormSubmit} className="form">
+                <h1 className="moto-service-Heading">{t('motoTaxi')}</h1>
+                <h1 className="moto-service-title">{t('byPhone')}</h1>
+                <p className="des">{t('callAt')}</p>
                 <h2 className="formTitle">{t('fillTheForm')}</h2>
                 <div className="row">
                     <div>
-                        <label className="label">{t('firstName')} <span style={{ color: 'red' }}>*</span></label>
-                        <input required placeholder={`${t('entyourfirstname')}`} value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} type='text' className="input" />
+                        <label className="label">{t('yourName')} <span style={{ color: 'red' }}>*</span></label>
+                        <input required placeholder={`${t('enterYourName')}`} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} type='text' className="input" />
                     </div>
                     <div>
-                        <label className="label">{t('lastName')} <span style={{ color: 'red' }}>*</span></label>
-                        <input required placeholder={`${t('entyourlastname')}`} value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} type='text' className="input" />
+                        <label className="label">{t('typeOfService')} <span style={{ color: 'red' }}>*</span></label>
+                        <select required className="input" value={formData.serviceType} onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}>
+                            <option value=''>{t('select')}...</option>
+                            <option value={t('singleTrip')}>{t('singleTrip')}</option>
+                            <option value={t('vehicleAtDes')}>{t('vehicleAtDes')}</option>
+                        </select>
+                    </div>
+                </div>
+                <div className="row">
+
+                    <div>
+                        <label className="label">{t('depAddress')} <span style={{ color: 'red' }}>*</span></label>
+                        <input required placeholder={`${t('enterAddress')}`} value={formData.departure} onChange={(e) => setFormData({ ...formData, departure: e.target.value })} type='text' className="input" />
+                    </div>
+                    <div>
+                        <label className="label">{t('destAddress')} <span style={{ color: 'red' }}>*</span></label>
+                        <input required type='text' placeholder={`${t('enterAddress')}`} value={formData.destination} onChange={(e) => setFormData({ ...formData, destination: e.target.value })} className="input" />
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div>
+                        <label className="label">{t('pickDate')} <span style={{ color: 'red' }}>*</span></label>
+                        <input required type='date' className="input" value={formData.date} onChange={(e) => setFormData({ ...formData, date: e.target.value })} />
+                    </div>
+                    <div>
+                        <label className="label">{t('pickupTime')} <span style={{ color: 'red' }}>*</span></label>
+                        <input required type='time' className="input" value={formData.time} onChange={(e) => setFormData({ ...formData, time: e.target.value })} />
                     </div>
                 </div>
                 <div className='row'>
@@ -111,14 +151,18 @@ export const ContactForm = () => {
                 </div>
                 <div className='row'>
                     <div>
-                        <label className="label">{t('description')} <span style={{ color: 'red' }}>*</span></label>
-                        <textarea required type='text' placeholder={t('enterDes')} className="input" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
+                        <label className="label">{t('description')} {t('ifany')}</label>
+                        <textarea type='text' placeholder={t('enterDes')} className="input" value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
                     </div>
                 </div>
+
+                <p className="note">
+                    <strong>{t('note')}</strong> {t('noteTxt')}
+                </p>
                 <div className='book-button'>
 
                     <button type='submit' className="button">
-                        {t('Submit')}
+                        {t('bookNow')}
                     </button>
                 </div>
                 {showMessage && (
@@ -148,5 +192,8 @@ export const ContactForm = () => {
 
             </form>
         </div>
+        </div>
     );
 };
+
+export default MotoService;

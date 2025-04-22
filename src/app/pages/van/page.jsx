@@ -10,7 +10,7 @@ export default function Van() {
       <img className='banner-moto' src="/img/car1.jpg" alt="bike"/>
       <p className='moto-content'>{t('dayRental')}</p>
       <div className='book-now-button'>
-      <Link className='book-now' href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }}>{t('bookNow')}</Link>
+      <Link className='book-now' href={'/vtcservice'}>{t('bookNow')}</Link>
       </div>
       <div style={{height: '60px'}} />
     </div>

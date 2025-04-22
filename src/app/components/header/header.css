@@ -53,6 +53,8 @@
   
   .nav-title {
     position: relative;
+    font-weight: 600;
+    font-size: 12px;
     color: #030405;
     cursor: pointer;
     align-items:center;
@@ -65,6 +67,8 @@
 
   .nav-title-txt {
     position: relative;
+    font-weight: 600;
+    font-size: 12px;
     color: #030405;
     cursor: pointer;
     align-items:center;

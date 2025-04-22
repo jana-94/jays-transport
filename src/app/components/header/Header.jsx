@@ -21,16 +21,6 @@ const Header = () => {
     setNavOpen(false);
   };
 
-  const handleOptionClickForScrool = () => {
-    // Scroll after short delay to ensure the DOM updates
-    setTimeout(() => {
-      const section = document.getElementById('reservation');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
-  };
-
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -76,12 +66,12 @@ const Header = () => {
         <div className='dropdown'>
           <h1 className='nav-title flex'>{t('reservation')} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
           <div className='dropdown-content'>
-            <Link href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }}>{t('motoTaxi')}</Link>
-            <Link href={{ pathname: '/', query: { service: `${t('vtc')}` }, hash: 'reservation' }}>{t('vtc')}</Link>
+            <Link href={'/motoservice'}>{t('motoTaxi')}</Link>
+            <Link href={'/vtcservice'}>{t('vtc')}</Link>
           </div>
         </div>
 
-        <Link className='nav-title' href="/#footer">
+        <Link className='nav-title' href="/#contact">
           <h1>{t('contact')}</h1>
         </Link>
       </div>
@@ -165,21 +155,15 @@ const Header = () => {
         <div className='dropdown'>
           <h1 className='nav-title-txt flex'>{t('reservation')} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
           <div className='dropdown-content'>
-            <Link scroll={false} href={{ pathname: '/', query: { service: `${t('motoTaxi')}` }, hash: 'reservation' }}
-             onClick={() => {
-              handleOptionClick();
-              handleOptionClickForScrool();
-            }}>{t('motoTaxi')}</Link>
-            <Link scroll={false} href={{ pathname: '/', query: { service: `${t('vtc')}` }, hash: 'reservation' }}
-             onClick={() => {
-              handleOptionClick();
-              handleOptionClickForScrool();
-            }}>{t('vtc')}</Link>
+            <Link href={'/motoservice'}
+             onClick={handleOptionClick}>{t('motoTaxi')}</Link>
+            <Link href={'/vtcservice'}
+             onClick={handleOptionClick}>{t('vtc')}</Link>
           </div>
         </div>
         <div className='divider-nav' />
 
-        <Link className='nav-title-txt' href="/#footer" onClick={handleOptionClick}>
+        <Link className='nav-title-txt' href="/#contact" onClick={handleOptionClick}>
           <h1>{t('contact')}</h1>
         </Link>
         <div className='divider-nav' />

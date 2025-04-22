@@ -37,13 +37,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  
-  .home-content p {
-    font-family: var(--font-montserrat);
-    width: 90%;
-    font-size: 1rem;
-    color: #030405;
-  }
 
   .vehicle img{
       transition: transform 0.3s ease-in-out;
@@ -57,7 +50,7 @@
     font-family: var(--font-montserrat);
     width: 90%;
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #030405;
   }
 

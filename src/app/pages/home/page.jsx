@@ -2,7 +2,7 @@
 
 import Metadata from "@/app/components/metaData/metaData";
 import './home.css';
-import MotoServices from "@/app/components/services/page";
+import OurServices from "@/app/components/services/page";
 import { useTranslation } from "react-i18next";
 import { ContactForm } from "@/app/components/Contact/page";
 
@@ -21,8 +21,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className="home-content">
-        <h1>{t('introDescription')}</h1>
-        <p>{t('fullRangeDescription')}</p>
+        <h1>{t('introDescription')}{t('fullRangeDescription')}</h1>
       </div>
       <h1 className="vehicle-heading">{t('fleet')}</h1>
       <div className="vehicle-container">
@@ -40,8 +39,8 @@ export default function HomePage() {
         </div>
       </div>
       <h1 className="vehicle-heading">{t('vtcTaxiServices')}</h1>
-      <MotoServices />
-      <h1 id="reservation" className="vehicle-heading" style={{ paddingTop: '100px' }}>{t('reservation')}</h1>
+      <OurServices />
+      <h1 id="contact" className="vehicle-heading" style={{ paddingTop: '100px' }}>{t('contact')}</h1>
       <ContactForm />
       </div>
   );
