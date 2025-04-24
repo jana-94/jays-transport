@@ -5,7 +5,7 @@ import './header.css';
 import { useLanguage } from '@/app/language/LanguageProvider';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useRef, useState } from 'react';
-import Popup from '../Popup/page';
+import Popup from '../Popup/popup';
 
 const Header = () => {
   const { t } = useTranslation();
