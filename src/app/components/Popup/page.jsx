@@ -1,4 +1,5 @@
 // components/Popup.jsx
+'use client';
 import React from 'react';
 import './Popup.css'; // Or inline styles
 
