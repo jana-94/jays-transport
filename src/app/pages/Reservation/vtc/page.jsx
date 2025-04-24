@@ -42,12 +42,12 @@ const VtcService = () => {
 
     const generateEmailTemplate = (formData) => {
         return `
-          Hi, I'm ${formData.name}. I need ${formData.serviceType} service 
-          from ${formData.departure} to ${formData.destination} 
-          on ${formData.date} at ${formData.time}.
-          Number of passengers: ${formData.passengers}${formData.bags?.length > 0 ? `, Bags: ${formData.bags}` : ''}.
-          You can contact me at Email: ${formData.email}, Mobile: ${formData.mobile}.
-          ${formData.description?.length > 0 ? `Description: ${formData.description}` : ''}.
+          ${t('Hi')} ${formData.name}. ${t('Ineed')} ${formData.serviceType} ${t('service')} 
+          ${t('from')} ${formData.departure} ${t('to')} ${formData.destination} 
+          ${t('on')} ${formData.date} ${t('at')} ${formData.time}.
+          ${t('nopass')}: ${formData.passengers}${formData.bags?.length > 0 ? `, ${t('bags')}: ${formData.bags}` : ''}.
+          ${t('contactme')}: ${formData.email}, ${t('Mobile')}: ${formData.mobile}.
+          ${formData.description?.length > 0 ? `${t('description')}: ${formData.description}` : ''}.
         `;
     };
 
@@ -59,7 +59,7 @@ const VtcService = () => {
       
         try {
           setShowMessage('wait');
-          setMessage('Please wait,.. Email sending inprogress!...');
+          setMessage(`${t('pleasewait')}`);
       
           const response = await fetch('/api/sendEmail', {
             method: 'POST',
@@ -77,19 +77,19 @@ const VtcService = () => {
       
           if (response.ok) {
             setShowMessage('success');
-            setMessage('Email sent successfully!');
+            setMessage(`${t('emailsent')}`);
             clearAllFormData();
           } else {
             setShowMessage('error');
-            setMessage(`Failed to send email: ${data.error}`);
+            setMessage(`${t('emailfailed')}: ${data.error}`);
             clearAllFormData();
           }
       
         } catch (err) {
           setShowMessage('error');
-          setMessage(`Something went wrong`);
+          setMessage(`${t('somethingwrong')}`);
           clearAllFormData();
-          console.log(`Something went wrong: ${err.message}`);
+          console.log(`${t('somethingwrong')}: ${err.message}`);
         }
       
         // ✅ Only reset message after delay — not forcefully set to error!

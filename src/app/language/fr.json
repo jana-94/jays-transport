@@ -77,5 +77,20 @@
   "entyourlastname": "Entrez votre nom de famille",
   "enterDes": "Entrez la description",
   "Submit": "Soumettre",
-  "ifany": "(le cas échéant)"
+  "ifany": "(le cas échéant)",
+  "Hi": "Salut, je suis",
+  "contactme": "Vous pouvez me contacter par Email",
+  "Mobile": "Mobile",
+  "pleasewait": "Veuillez patienter. Envoi de l'email en cours !",
+  "emailsent": "E-mail envoyé avec succès !",
+  "emailfailed": "Échec de l'envoi de l'e-mail",
+  "somethingwrong": "Quelque chose s'est mal passé",
+  "Ineed": "J'ai besoin",
+  "from": "depuis",
+  "to": "à",
+  "on": "sur",
+  "at": "à",
+  "service": "service",
+  "bags": "Sacs",
+  "nopass": "Nombre de passagers"
 }

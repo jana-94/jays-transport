@@ -77,5 +77,20 @@
   "entyourlastname": "Enter your last name",
   "enterDes": "Enter description",
   "Submit": "Submit",
-  "ifany": "(if any)"
+  "ifany": "(if any)",
+  "Hi": "Hi, I'm",
+  "contactme": "You can contact me at Email",
+  "Mobile": "Mobile",
+  "pleasewait": "Please wait.. Email sending in progress!...",
+  "emailsent": "Email sent successfully!",
+  "emailfailed": "Failed to send email",
+  "somethingwrong": "Something went wrong",
+  "Ineed": "I need",
+  "from": "from",
+  "to": "to",
+  "on": "on",
+  "at": "at",
+  "service": "service",
+  "bags": "Bags",
+  "nopass": "Number of passengers"
 }
