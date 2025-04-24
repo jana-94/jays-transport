@@ -14,7 +14,7 @@ export default function Vtc() {
       <p className='moto-content'>{t('vtcIntro')}</p>
       <h1 className='moto-heading'>{t('transportForIndividuals')}</h1>
       <p className='moto-content'>{t('individualServiceArea')}</p>
-      <h1 className='moto-heading'>{t('availableFor')}</h1>
+      <h1 className='moto-content'>{t('availableFor')}</h1>
       <ul className='vtc-list'>
         <li className='moto-content'>{t('races')}</li>
         <li className='moto-content'>{t('stationAirportTransfers')}</li>

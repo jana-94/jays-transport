@@ -42,8 +42,8 @@ const Footer = () => {
         >
         <span className="address flex"><img className="mr-2 h-3 w-3" src="/img/marker.svg" /> <p className='hide-bottom-txt'> 8 Avenue des Saules, 91390, Morsang-sur-Orge, France </p></span>
         </Link>
-        <Link href="tel:+33177052718" className="address-content">
-          <span className="address flex"><img className="mr-2 h-3 w-3" src="/img/call_white.svg" /> <p className='hide-bottom-txt'>+33 (0)1 77 05 27 18 </p></span>
+        <Link href="tel:+33684406126" className="address-content">
+          <span className="address flex"><img className="mr-2 h-3 w-3" src="/img/call_white.svg" /> <p className='hide-bottom-txt'> +33 (0)6 84 40 61 26 </p></span>
         </Link>
       </div>
       <div style={{ width: '100%' }}>
@@ -53,12 +53,9 @@ const Footer = () => {
       <div className='footer-bottom'>
         <div className="address-content">
           <p className="address flex">
-            {t('title')} &copy;{new Date().getFullYear()}. All rights received
+            {t('title')} &copy;{new Date().getFullYear()}. {t('rightsreserved')}
           </p>
         </div>
-        <Link href="tel:+33684406126" className="address-content">
-          <span className="address flex"><img className="mr-2 h-3 w-3" src="/img/call_white.svg" /> <p className='hide-bottom-txt'> +33 (0)6 84 40 61 26 </p></span>
-        </Link>
         <Link href="mailto:contact@jays-transport.fr" className="address-content">
           <span className="address flex"> <img className="mr-2 h-3 w-3" src="/img/mail.svg" /> <p className='hide-bottom-txt'> contact@jays-transport.fr </p></span>
         </Link>

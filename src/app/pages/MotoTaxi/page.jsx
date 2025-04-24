@@ -12,7 +12,6 @@ export default function MotoTaxi() {
       <div className='banner-outline'>
       <img className='banner-moto' src="/img/bike_new.png" alt="bike"/>
       </div>
-      <h1 className='moto-heading'>{t('fleet')}</h1>
       <p className='moto-content'>{t('mototaxiUsage')}</p>
       <p className='moto-content'>{t('mototaxiCustom')}</p>
       <p className='moto-content'>{t('mototaxiSafety')}</p>
