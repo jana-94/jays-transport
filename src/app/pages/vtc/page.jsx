@@ -8,7 +8,9 @@ export default function Vtc() {
   return (
     <div className="flex bg-white flex-col w-full">
       <h1 className='title'>{t('vtc')}</h1>
-      <img className='banner-moto' src="/img/berline.png" alt="bike"/>
+      <div className='banner-outline'>
+      <img className='banner-moto' src="/img/car_new.png" alt="bike"/>
+      </div>
       <p className='moto-content'>{t('vtcIntro')}</p>
       <h1 className='moto-heading'>{t('transportForIndividuals')}</h1>
       <p className='moto-content'>{t('individualServiceArea')}</p>

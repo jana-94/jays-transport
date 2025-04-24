@@ -26,11 +26,11 @@ export default function HomePage() {
       <h1 className="vehicle-heading">{t('fleet')}</h1>
       <div className="vehicle-container">
         <div className="vehicle">
-        <img src="/img/bike.jpg" alt="bike"/>
+        <img src="/img/bike_new.png" alt="bike"/>
         <p>{t('motoTaxi')}</p>
         </div>
         <div className="vehicle">
-        <img src="/img/berline.png" alt="berline"/>
+        <img src="/img/car_new.png" alt="berline"/>
         <p>{t('sedanSUV')}</p>
         </div>
         <div className="vehicle">

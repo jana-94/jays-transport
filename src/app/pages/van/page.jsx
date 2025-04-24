@@ -7,7 +7,9 @@ export default function Van() {
   return (
     <div className="flex bg-white flex-col w-full">
       <h1 className='title'>{t('carProvision')}</h1>
+      <div className='banner-outline'>
       <img className='banner-moto' src="/img/car1.jpg" alt="bike"/>
+      </div>
       <p className='moto-content'>{t('dayRental')}</p>
       <div className='book-now-button'>
       <Link className='book-now' href={'/vtcservice'}>{t('bookNow')}</Link>

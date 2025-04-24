@@ -9,7 +9,9 @@ export default function MotoTaxi() {
   return (
     <div className="flex bg-white flex-col w-full">
       <h1 className='title'>{t('motorcycleTaxi')}</h1>
-      <img className='banner-moto' src="/img/bike.jpg" alt="bike"/>
+      <div className='banner-outline'>
+      <img className='banner-moto' src="/img/bike_new.png" alt="bike"/>
+      </div>
       <h1 className='moto-heading'>{t('fleet')}</h1>
       <p className='moto-content'>{t('mototaxiUsage')}</p>
       <p className='moto-content'>{t('mototaxiCustom')}</p>

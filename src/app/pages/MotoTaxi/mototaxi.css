@@ -8,11 +8,23 @@
     margin-left: 40px;
 }
 .banner-moto{
-    width: 90%;
+    object-fit: contain;
+    width: 50%;
     border-radius: 8px;
     margin-top: 20px;
     margin-left: 5%;
     margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner-moto:hover {
+  transform: translateY(-5px);
+}
+.banner-outline{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .moto-heading{
     font-size: 4rem;
