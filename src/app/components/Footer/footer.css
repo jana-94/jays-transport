@@ -129,7 +129,7 @@
       justify-content: space-around;
     }
     .header-logo{
-      height: 30px;
+      height: 40px;
     }
     .footer-outline{
       padding: 30px 0px 30px;
@@ -165,7 +165,7 @@
 
   @media (max-width: 425px) {
     .header-logo{
-      height: 20px;
+      height: 40px;
     }
     .address-content{
       font-size: .5rem;

@@ -45,10 +45,10 @@ const Header = () => {
         <Link href='/'>
           <Image
             className='header-logo'
-            src='/img/logo_new.svg'
+            src='/img/logo_latest_svg.svg'
             alt='logo'
-            width={200}
-            height={40}
+            width={120}
+            height={60}
           />
         </Link>
         <div className={'header-nav'}>
@@ -78,7 +78,7 @@ const Header = () => {
             <h1 className='nav-title flex'><img className='mr-2' src='/img/call.svg' /> +33 (0)6 84 40 61 26</h1>
           </Link>
           <div className='dropdown'>
-            <h1 className='nav-title flex'><img className='mr-2' src='/img/lang_new.svg' /> {language} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
+            <h1 className='nav-title flex'><img className='mr-2' src='/img/lang.svg' /> {language} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
             <div className='dropdown-content'>
               <div onClick={() => changeLanguage('en')} className='dropdown-item'>
                 <Image height={20} width={20} className='mr-2' src='/img/en.png' alt='English' />
@@ -100,10 +100,10 @@ const Header = () => {
           <Link href='/' onClick={handleOptionClick}>
             <Image
               className='header-logo'
-              src='/img/logo_new.svg'
+              src='/img/logo_latest_svg.svg'
               alt='logo'
-              width={200}
-              height={40}
+              width={120}
+              height={60}
             />
           </Link>
           <div className='header-lang'>
@@ -111,7 +111,7 @@ const Header = () => {
               <span style={{ display: 'flex', alignItems: 'center' }} ><img className='mr-2 h-3 w-4' src='/img/call.svg' /><h1 className='nav-title call-hide'> +33 (0)6 84 40 61 26</h1></span>
             </Link>
             <div className='dropdown'>
-              <span style={{ display: 'flex', alignItems: 'center' }} > <img className='mr-2 h-3 w-4' src='/img/lang_new.svg' /><h1 className='nav-title'> {language} </h1> <img className='ml-2' src='/img/down-arrow.svg' /> </span>
+              <span style={{ display: 'flex', alignItems: 'center' }} > <img className='mr-2 h-3 w-4' src='/img/lang.svg' /><h1 className='nav-title'> {language} </h1> <img className='ml-2' src='/img/down-arrow.svg' /> </span>
               <div className='dropdown-content'>
                 <div onClick={() => { changeLanguage('en'); handleOptionClick(); }} className='dropdown-item'>
                   <Image height={20} width={20} className='mr-2 h-4 w-4' src='/img/en.png' alt='English' />

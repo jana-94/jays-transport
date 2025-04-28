@@ -14,9 +14,9 @@ const Footer = () => {
         <Link href='/'>
           <Image
             className='header-logo'
-            src='/img/logo_new_white.svg'
+            src='/img/logo_latest_white_svg.svg'
             alt='logo'
-            width={200}
+            width={120}
             height={40}
           />
         </Link>
