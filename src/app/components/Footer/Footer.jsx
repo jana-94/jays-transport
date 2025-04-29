@@ -53,7 +53,10 @@ const Footer = () => {
       <div className='footer-bottom'>
         <div className="address-content">
           <p className="address flex">
-            {t('title')} &copy;{new Date().getFullYear()}. {t('rightsreserved')}
+            {t('title')} &copy;{new Date().getFullYear()}.
+          </p>
+          <p className="address flex">
+          {t('rightsreserved')}
           </p>
         </div>
         <Link href="mailto:contact@jays-transport.fr" className="address-content">
