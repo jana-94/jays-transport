@@ -23,6 +23,7 @@ export default function HomePage() {
       <div className="home-content">
         <h1>{t('introDescription')}{t('fullRangeDescription')}</h1>
       </div>
+      <div className="single-frame">
       <h1 className="vehicle-heading">{t('fleet')}</h1>
       <div className="vehicle-container">
         <div className="vehicle">
@@ -37,6 +38,7 @@ export default function HomePage() {
         <img src="/img/van.png" alt="van"/>
         <p>{t('van')}</p>
         </div>
+      </div>
       </div>
       <h1 className="vehicle-heading">{t('vtcTaxiServices')}</h1>
       <OurServices />
