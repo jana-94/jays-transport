@@ -32,7 +32,7 @@ export default function HomePage() {
         </div>
         <div className="vehicle">
         <img src="/img/car_new.png" alt="berline"/>
-        <p>{t('sedanSUV')}</p>
+        <p>{t('sedanSUVHome')}</p>
         </div>
         <div className="vehicle">
         <img src="/img/van.png" alt="van"/>
