@@ -1,13 +1,16 @@
 // src/app/api/sendEmail/route.js
+
+import dotenv from 'dotenv';
+dotenv.config();
+
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
-  const body = await request.json();
-  const { name, email, message } = body;
+  const { name, email, message, type, bookingDetails } = await request.json();
 
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
-    port: process.env.EMAIL_PORT,
+    port: Number(process.env.EMAIL_PORT),
     secure: process.env.EMAIL_SECURE === 'true',
     auth: {
       user: process.env.EMAIL_USER,
@@ -16,20 +19,38 @@ export async function POST(request) {
   });
 
   try {
+    // 1️⃣ Send email to ADMIN
     await transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: `"Jay's Transport Website" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO,
-      subject: `New Booking Request from ${name}`,
-      text: message,
+      replyTo: email,
+      subject: type === 'booking' ? `New Booking Request from ${name}` : `New Message from ${name}`,
+      text: type === 'booking' 
+        ? `Booking Request Details:\n\n${bookingDetails}` 
+        : message,
     });
 
-    return new Response(JSON.stringify({ success: true, message: 'Email sent' }), {
-      status: 200,
+    // 2️⃣ Send confirmation email to USER
+    const userMessage = type === 'booking'
+      ? `Hi ${name},\n\nWe have received your booking request:\n\n${bookingDetails}\n\nOur team will contact you shortly.\n\nBest regards,\nJay's Transport`
+      : `Hi ${name},\n\nThank you for contacting Jay's Transport.\nWe have received your message and will contact you shortly.\n\nBest regards,\nJay's Transport`;
+
+    await transporter.sendMail({
+      from: `"Jay's Transport" <${process.env.EMAIL_USER}>`,
+      to: email,
+      subject: type === 'booking' ? "We received your booking request" : "We received your message",
+      text: userMessage,
     });
+
+    return new Response(
+      JSON.stringify({ success: true, message: 'Emails sent' }),
+      { status: 200 }
+    );
   } catch (error) {
     console.error('Error sending email:', error);
-    return new Response(JSON.stringify({ success: false, error: error.message }), {
-      status: 500,
-    });
+    return new Response(
+      JSON.stringify({ success: false, error: error.message }),
+      { status: 500 }
+    );
   }
 }

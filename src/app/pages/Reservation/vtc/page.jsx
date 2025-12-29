@@ -51,53 +51,59 @@ const VtcService = () => {
         `;
     };
 
+      const onFormSubmit = async (e) => {
+  e.preventDefault();
 
-    const onFormSubmit = async (e) => {
-        e.preventDefault();
-      
-        const message = generateEmailTemplate(formData);
-      
-        try {
-          setShowMessage('wait');
-          setMessage(`${t('pleasewait')}`);
-      
-          const response = await fetch('/api/sendEmail', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              name: formData.name,
-              email: formData.email,
-              message: message,
-            }),
-          });
-      
-          const data = await response.json();
-      
-          if (response.ok) {
-            setShowMessage('success');
-            setMessage(`${t('emailsent')}`);
-            clearAllFormData();
-          } else {
-            setShowMessage('error');
-            setMessage(`${t('emailfailed')}: ${data.error}`);
-            clearAllFormData();
-          }
-      
-        } catch (err) {
-          setShowMessage('error');
-          setMessage(`${t('somethingwrong')}`);
-          clearAllFormData();
-          console.log(`${t('somethingwrong')}: ${err.message}`);
-        }
-      
-        // ✅ Only reset message after delay — not forcefully set to error!
-        setTimeout(() => {
-          setShowMessage('');
-          setMessage('');
-        }, 3000);
-      };
+  // Determine if this is a booking or a contact message
+  const type = 'booking';
+
+  // Generate the appropriate message / booking details
+  const message = undefined;
+
+  const bookingDetails = generateEmailTemplate(formData);
+
+  try {
+    setShowMessage('wait');
+    setMessage(`${t('pleasewait')}`);
+
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        type,               // new field
+        message,            // only for contact
+        bookingDetails,     // only for booking
+      }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      setShowMessage('success');
+      setMessage(`${t('emailsent')}`);
+      clearAllFormData();
+    } else {
+      setShowMessage('error');
+      setMessage(`${t('emailfailed')}: ${data.error}`);
+      clearAllFormData();
+    }
+
+  } catch (err) {
+    setShowMessage('error');
+    setMessage(`${t('somethingwrong')}`);
+    clearAllFormData();
+    console.log(`${t('somethingwrong')}: ${err.message}`);
+  }
+
+  // Reset message after delay
+  setTimeout(() => {
+    setShowMessage('');
+    setMessage('');
+  }, 3000);
+};
+
       
 
     return (
