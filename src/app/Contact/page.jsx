@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './contact.css';
 import { useEffect, useState } from 'react';
 
-export const ContactForm = () => {
+const ContactForm = () => {
     const { t } = useTranslation();
     const [message, setMessage] = useState('');
     const [showMessage, setShowMessage] = useState('');
@@ -156,3 +156,5 @@ export const ContactForm = () => {
         </div>
     );
 };
+
+export default ContactForm;

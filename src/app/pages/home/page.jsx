@@ -4,7 +4,7 @@ import Metadata from "@/app/components/metaData/metaData";
 import './home.css';
 import OurServices from "@/app/components/services/page";
 import { useTranslation } from "react-i18next";
-import { ContactForm } from "@/app/components/Contact/page";
+import ContactForm from "@/app/Contact/page";
 
 export default function HomePage() {
   const { t } = useTranslation();
