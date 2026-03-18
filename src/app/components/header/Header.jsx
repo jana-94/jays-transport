@@ -59,7 +59,7 @@ const Header = () => {
           <div className='dropdown'>
             <h1 className='nav-title flex'>{t('ourServices')} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
             <div className='dropdown-content'>
-              <Link href='/mototaxi'>{t('motoTaxi')}</Link>
+              <Link href='http://mototaxi.jays-transport.fr/'>{t('motoTaxi')}</Link>
               <Link href='/vtc'>{t('vtc')}</Link>
               <Link href='/van'>{t('carProvision')}</Link>
             </div>
