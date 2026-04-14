@@ -143,7 +143,7 @@ const Header = () => {
             <div className='dropdown'>
               <h1 className='nav-title-txt flex'>{t('ourServices')} <img className='ml-2' src='/img/down-arrow.svg' /></h1>
               <div className='dropdown-content'>
-                <Link href='/mototaxi' onClick={handleOptionClick}>{t('motoTaxi')}</Link>
+                <Link href='http://mototaxi.jays-transport.fr/' onClick={handleOptionClick}>{t('motoTaxi')}</Link>
                 <Link href='/vtc' onClick={handleOptionClick}>{t('vtc')}</Link>
                 <Link href='/van' onClick={handleOptionClick}>{t('carProvision')}</Link>
               </div>
