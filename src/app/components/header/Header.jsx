@@ -166,14 +166,14 @@ const Header = () => {
               <p>{t('motoTaxi')}</p>
               <img className='img-vehicle' src='img/bike_new.png' />
               <div className='btn-outline'>
-                <Link className='book-nowbtn' onClick={() => setShowPopup(false)} href={'/motoservice'}>{t('bookNow')}</Link>
+                <Link className='book-nowbtn' onClick={() => setShowPopup(false)} href={'/mototaxireservation'}>{t('bookNow')}</Link>
               </div>
             </div>
             <div className='seperator'>
               <p>{t('sedanSUV')}</p>
               <img className='img-vehicle' src='img/car_new.png' />
               <div className='btn-outline'>
-                <Link className='book-nowbtn' onClick={() => setShowPopup(false)} href={'/vtcservice'}>{t('bookNow')}</Link>
+                <Link className='book-nowbtn' onClick={() => setShowPopup(false)} href={'/vtcreservation'}>{t('bookNow')}</Link>
               </div>
             </div>
 

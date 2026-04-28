@@ -16,7 +16,7 @@ export default function MotoTaxi() {
       <p className='moto-content'>{t('mototaxiCustom')}</p>
       <p className='moto-content'>{t('mototaxiSafety')}</p>
       <div className='book-now-button'>
-      <Link className='book-now' href={'/motoservice'}>{t('bookNow')}</Link>
+      <Link className='book-now' href={'/mototaxireservation'}>{t('bookNow')}</Link>
       </div>
       <div style={{height: '60px'}} />
     </div>

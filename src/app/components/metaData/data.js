@@ -20,13 +20,13 @@ export const metadata = [
     description: "jay's transport van",
   },
   {
-    slug: "motoservice",
-    title: "motoservice",
-    description: "jay's transport motoservice",
+    slug: "mototaxireservation",
+    title: "mototaxireservation",
+    description: "jay's transport mototaxireservation",
   },
   {
-    slug: "vtcservice",
-    title: "vtcservice",
-    description: "jay's transport vtcservice",
+    slug: "vtcreservation",
+    title: "vtcreservation",
+    description: "jay's transport vtcreservation",
   },
 ];

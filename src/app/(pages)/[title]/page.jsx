@@ -22,8 +22,8 @@ function Services({ params }) {
     { id: 1, Component: <MotoTaxi />, path: "mototaxi" },
     { id: 2, Component: <Vtc />, path: "vtc" },
     { id: 3, Component: <Van />, path: "van" },
-    { id: 4, Component: <MotoService />, path: "motoservice" },
-    { id: 5, Component: <VtcService />, path: "vtcservice" },
+    { id: 4, Component: <MotoService />, path: "mototaxireservation" },
+    { id: 5, Component: <VtcService />, path: "vtcreservation" },
   ];
 
   const foundData = findDataByTitle(data.title);

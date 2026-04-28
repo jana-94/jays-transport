@@ -24,7 +24,7 @@ export default function Vtc() {
         <p className='moto-content'>{t('proTripBenefits')}</p>
       <p className='moto-content'>{t('easyBooking')}</p>
       <div className='book-now-button'>
-      <Link className='book-now' href={'/vtcservice'}>{t('bookNow')}</Link>
+      <Link className='book-now' href={'/vtcreservation'}>{t('bookNow')}</Link>
       </div>
       <div style={{height: '60px'}} />
     </div>

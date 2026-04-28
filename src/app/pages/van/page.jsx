@@ -12,7 +12,7 @@ export default function Van() {
       </div>
       <p className='moto-content'>{t('dayRental')}</p>
       <div className='book-now-button'>
-      <Link className='book-now' href={'/vtcservice'}>{t('bookNow')}</Link>
+      <Link className='book-now' href={'/vtcreservation'}>{t('bookNow')}</Link>
       </div>
       <div style={{height: '60px'}} />
     </div>

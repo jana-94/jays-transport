@@ -13,10 +13,10 @@ export const componentdetails = [
   },
   {
     id: 4,
-    slug: "motoservice",
+    slug: "mototaxireservation",
   },
   {
     id: 5,
-    slug: "vtcservice",
+    slug: "vtcreservation",
   },
 ];
